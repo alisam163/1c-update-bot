@@ -1,0 +1,9 @@
+services:
+  1c-smart-updater:
+    build: .
+    container_name: 1c_release_checker
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./1c_data:/app/data
